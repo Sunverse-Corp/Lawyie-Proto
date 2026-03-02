@@ -92,7 +92,7 @@ def get_lawyie_response(prompt, task="chat"):
     log_usage(task)
     try:
         completion = groq_client.chat.completions.create(
-            model="mixtral-8x7b-32768",
+            model="llama3-70b-8192", # <--- Powerful, active model for legal tasks",
             messages=[
                 {"role": "system", "content": system_prompts.get(task, system_prompts["chat"])},
                 {"role": "user", "content": prompt}
