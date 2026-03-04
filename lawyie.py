@@ -147,7 +147,7 @@ with tabs[1]:
     
     col1, col2 = st.columns(2)
     with col1:
-        st.info("### Bkack Plan")
+        st.info("### Black Plan")
         st.write(f"**Price:** ₦{tier_1_price:,.0f} (Normally ₦5,000)")
         st.write("- General Legal Chat\n- Basic Citations\n- Standard Speed")
         if st.button("Subscribe to Black"):
