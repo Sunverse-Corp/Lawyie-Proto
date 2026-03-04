@@ -6,6 +6,23 @@ from datetime import datetime
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Lawyie (Beta Version) | Sunverse Corp", page_icon="⚖️", layout="wide")
+# --- HIDE STREAMLIT UI (MAKE IT LOOK LIKE AN APP) ---
+hide_streamlit_style = """
+<style>
+    /* Hides the top menu bar */
+    #MainMenu {visibility: hidden;}
+    /* Hides the header */
+    header {visibility: hidden;}
+    /* Hides the default Streamlit footer */
+    footer {visibility: hidden;}
+    /* Optional: Reduces top padding so your app is flush with the screen */
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # --- DATABASE SETUP (THE VAULT & TRACKING) ---
 # Note: On Streamlit Cloud, SQLite resets when the server reboots. 
