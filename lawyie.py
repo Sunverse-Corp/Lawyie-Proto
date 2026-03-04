@@ -133,7 +133,7 @@ with tabs[0]:
 
 # --- TAB 2: SUBSCRIPTIONS & VAULT DEPOSITS ---
 with tabs[1]:
-    st.write("### Choose Your Subscription")
+    st.write("### Choose Your Subscription. No Actual Charging, This is A Beta Version")
     users = get_user_count()
     
     is_early_bird = users < 100
@@ -147,19 +147,19 @@ with tabs[1]:
     
     col1, col2 = st.columns(2)
     with col1:
-        st.info("### Basic Plan")
+        st.info("### Bkack Plan")
         st.write(f"**Price:** ₦{tier_1_price:,.0f} (Normally ₦5,000)")
         st.write("- General Legal Chat\n- Basic Citations\n- Standard Speed")
-        if st.button("Subscribe to Basic"):
-            add_to_vault(tier_1_price, "Basic")
+        if st.button("Subscribe to Black"):
+            add_to_vault(tier_1_price, "Black")
             st.success("Payment successful! Funds added to the Sunverse Vault.")
             
     with col2:
-        st.warning("### Premium Plan")
+        st.warning("### Spark Plan")
         st.write(f"**Price:** ₦{tier_2_price:,.0f} (Normally ₦7,500)")
         st.write("- Document Drafting\n- Deep Contract Review\n- Priority Groq Processing")
-        if st.button("Subscribe to Premium"):
-            add_to_vault(tier_2_price, "Premium")
+        if st.button("Subscribe to Spark"):
+            add_to_vault(tier_2_price, "Spark")
             st.success("Payment successful! Funds added to the Sunverse Vault.")
 
 # --- TAB 3: LAWYIE AI CHAT ---
